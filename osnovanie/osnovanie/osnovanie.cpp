@@ -14,14 +14,12 @@ int main() {
 		else
 			s = s + (int(a[i]) - 55)*pow(c1, strlen(a) - i - 1);
 	}
-	while (s >= c2) {
+	do {
 		k = s % c2;
 		b[h] = l[k];
-
-		s = s / c2;
+		s /= c2;
 		h++;
-	}
-	b[h] = l[s];
+	} while (s != 0);
 	for (i = h; i >= 0; i--) //вывод в обратном порядке
 		printf("%c", b[i]);
 	return 0;
